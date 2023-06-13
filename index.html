@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/shopping-cart.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    * {
+      margin: 0;
+      padding: 0; 
+      box-sizing: border-box;
+    }
+    html{
+       
+    }
+    body{
+       font-family: 'Fraunces', serif;
+       background-color: rgb(247, 232, 212);
+       min-height: 100vh;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+
+    .card{
+        display: flex;
+        border-radius: 10px;
+        max-width: 666px;
+        background-color: white;
+        margin: 0 1rem;
+    }
+    /* the card parent ele doesn't contain width and height properties set so it adjust based on content size 
+    in this case as we add img height 100% width it changes it's height based on aspect ratio 
+    and which affect the height and width of card ele as well. */
+    .left{
+        width: 50%;
+    }
+
+    .left img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .right {
+        width: 50%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .right h3{
+        color: hsl(212, 21%, 14%);
+        padding-right: 2rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .right .description{
+        font-family: "Montserrat";
+        font-size: 14px;
+        color: hsl(228, 12%, 48%);
+        line-height: 22px;
+        margin-bottom: 1.75rem;
+    }
+
+
+    .price{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 1.75rem;
+    }
+
+    .price .curr_price{
+        color: hsl(158, 36%, 37%);
+        font-family: "Montserrat";
+    }
+
+    .price .old{
+        font-family: "Montserrat";
+        color: hsl(228, 12%, 48%);
+        text-decoration: line-through;
+    }
+
+    .btn{
+        width: 100%;
+        border: 0;
+        outline: 0;
+        background-color: hsl(158, 16%, 37% );
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        font-family: "Montserrat";
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        font-size: large;
+    }
+
+    @media only screen and (max-width: 550px){
+        
+        .card{
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .left{
+            width: 100%;
+        }
+
+        .left img{
+            width: 100%;
+            height: 40%;
+           
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 0px;
+        }
+
+        .right{
+            display: flex;
+            width: 100%;
+
+        }
+
+        .right h1{
+            margin-bottom: 1rem;
+        }
+
+    }
+   
+
+
+</style>
+    <body>
+        <div class="card">
+            <div class="left">
+                <img src="C:\Users\Admin\Desktop\img.jpg" alt="">
+            </div>
+
+            <div class="right">
+                <h3>PERFUME</h3>
+                <h1>Gabrielle
+                Essence Eau De Perfum</h1>
+
+                <p class="description">
+                    A floral, solar and voluptuous interpretation composed by Olivier Plohe, Perfume cretor for the house of chanel.
+                </p>
+                
+                <div class="price">
+                    <h1 class="curr_price"> $144.33</h1>
+                    <p class="old">$ 169.99 </p>
+                </div>
+                <button class="btn">
+                    <i class="gg-shopping-cart"></i>
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
